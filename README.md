@@ -1,6 +1,10 @@
 # astrosnippets
 Code snippets I keep using, eg constants, plotting defaults
 
+## Installation with pip
+```shell
+pip install git+https://github.com/maklinger/astrosnippets.git
+```
 
 ## Licensing
 
