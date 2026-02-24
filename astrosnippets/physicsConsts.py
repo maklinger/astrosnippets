@@ -21,9 +21,6 @@ aSB = 7.5646e-15
 Bc = me**2 * c**3 / e / hbar
 Bcp = mp**2 * c**3 / e / hbar
 
-eV2erg = 1.60218e-12
-erg2eV = 1/eV2erg
-
 AU = 1.496e13
 pc = 3.086e18
 ly = 9.463e17
@@ -35,3 +32,14 @@ Tsun = 5780
 
 mEarth = 5.976e27
 rEarth = 6.378e8
+
+eV2erg = 1.60218e-12
+erg2eV = 1/eV2erg
+Hz2eV = 4.13566553853599e-15 # 1Hz in eV
+Jky2erg_cm2sHz = 1e-23 # 1 Jansky in erg /(cm2 s Hz)
+
+deg2rad = np.pi/180
+arcmin2rad = deg2rad/60
+arcsec2rad = arcmin2rad/60
+marcsec2rad = arcsec2rad/1000
+muarcsec2rad = marcsec2rad/1000
