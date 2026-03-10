@@ -73,11 +73,15 @@ def jupyter(alpha=1.3,  aspectRatio=4./6., legendHandleLength=1):
 
 
 # save figure as pdf and png in one command
-def saveFigure(fig, name, pdf=True, png=True, dpi=400):
+def saveFigure(fig, name, pdf=True, png=True, svg=True, dpi=400):
     if pdf:
         if not os.path.exists(os.path.split("./figs_pdf/" + name + ".pdf")[0]):
             os.makedirs(os.path.split("./figs_pdf/" + name + ".pdf")[0])
         fig.savefig("./figs_pdf/" + name + ".pdf")
+    if svg:
+        if not os.path.exists(os.path.split("./figs_svg/" + name + ".svg")[0]):
+            os.makedirs(os.path.split("./figs_svg/" + name + ".svg")[0])
+        fig.savefig("./figs_svg/" + name + ".svg")
     if png:
         if not os.path.exists(os.path.split("./figs_png/" + name + ".png")[0]):
             os.makedirs(os.path.split("./figs_png/" + name + ".png")[0])
