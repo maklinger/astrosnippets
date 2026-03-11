@@ -120,3 +120,14 @@ def fixticks(ax, xmin, xmax, ymin, ymax, dx, dy, xstart=None, ystart=None, grida
     ax.grid(which="both", visible=True, alpha=gridalpha)
     ax.set_aspect("equal")
     return ax
+
+
+def set_mpl_default_colors(newColors):
+    from cycler import cycler
+    if isinstance(newColors, list):
+        plt.rcParams['axes.prop_cycle'] = cycler(color=newColors)
+    elif isinstance(newColors, str):
+        from .colorschemes import tol_cset
+        plt.rcParams['axes.prop_cycle'] = cycler(color=list(tol_cset(newColors)))
+    else:
+        print(f"new colors {newColors} not found, try a list of colors or a string with a name from astrosnippets colorschemes")
